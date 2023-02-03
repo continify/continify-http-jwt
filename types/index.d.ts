@@ -1,5 +1,5 @@
 import { Continify } from 'continify'
-import * as jwt from 'jsonwebtoken'
+import { Request } from 'continify-http'
 
 export interface ContinifyHTTPJWTOptions {
   secret?: string
@@ -41,5 +41,11 @@ declare module 'continify' {
 
   interface Continify {
     $jwt: JWT
+  }
+}
+
+declare module 'continify-http' {
+  interface Request {
+    $user?: unknown
   }
 }
