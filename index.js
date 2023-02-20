@@ -48,12 +48,7 @@ JWTWrap.prototype.sign = function (data, options = {}) {
 }
 JWTWrap.prototype.verify = function (token, options = {}) {
   const nOption = merge(this.$options, options)
-  try {
-    return jwt.verify(token, nOption.secret, nOption)
-  } catch (err) {
-    err.code = 401
-    throw err
-  }
+  return jwt.verify(token, nOption.secret, nOption)
 }
 
 module.exports = ContinifyPlugin(

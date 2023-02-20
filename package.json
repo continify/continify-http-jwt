@@ -1,6 +1,6 @@
 {
   "name": "continify-http-jwt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "typings": "types/index.d.ts",
   "repository": "https://github.com/continify/continify-http-jwt.git",
