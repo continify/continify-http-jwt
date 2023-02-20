@@ -65,7 +65,7 @@ tap.test('jwt: verify error', async t => {
       token: 'error'
     }
   })
-  t.equal(statusCode, 401)
+  t.equal(statusCode, 400)
   t.equal(payload, 'jwt malformed')
 
   await ins.close()
